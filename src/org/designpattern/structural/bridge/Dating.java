@@ -1,6 +1,5 @@
 package org.designpattern.structural.bridge;
 
-import javax.activity.ActivityCompletedException;
 
 /**
  * Created with IntelliJ IDEA.
