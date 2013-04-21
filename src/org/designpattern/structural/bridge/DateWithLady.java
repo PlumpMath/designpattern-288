@@ -9,7 +9,6 @@ package org.designpattern.structural.bridge;
  */
 public class DateWithLady extends Dating{
     public void act(Activity activity){
-        activity = new EatMeal();
         activity.doSomething();
     }
 }

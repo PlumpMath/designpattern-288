@@ -27,4 +27,8 @@ public abstract class Employer {
     public void info(){
         System.out.println("the employer is an employer!");
     }
+
+    public Employer getChild(int index){
+        return null;
+    }
 }

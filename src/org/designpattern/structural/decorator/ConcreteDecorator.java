@@ -8,16 +8,18 @@ package org.designpattern.structural.decorator;
  * To change this template use File | Settings | File Templates.
  */
 public class ConcreteDecorator extends  Decorator {
+
     public ConcreteDecorator(Conponent conponent){
         super(conponent);
     }
     @Override
     public void operation() {
-         super.operation();
+        super.operation();
         System.out.println("concreteDecorator operation!");
+        addedBehavior();
     }
 
     public void addedBehavior(){
-        System.out.println("concreteDecorator behavior!");
+        System.out.println("concreteDecorator added behavior!");
     }
 }

@@ -30,4 +30,10 @@ public class Manager extends Employer {
     public void info() {
         System.out.println("i'm a manager!");
     }
+
+    @Override
+    public Employer getChild(int index) {
+        //To change body of overridden methods use File | Settings | File Templates
+        return this.getFollowing().get(index);
+    }
 }
