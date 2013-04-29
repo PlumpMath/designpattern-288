@@ -1,4 +1,4 @@
-package org.designpattern.behavioral.ChainOfResponsibility;
+package org.designpattern.behavioral.chainOfResponsibility;
 
 /**
  * Created with IntelliJ IDEA.

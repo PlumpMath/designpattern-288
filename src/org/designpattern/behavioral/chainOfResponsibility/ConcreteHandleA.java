@@ -1,14 +1,14 @@
-package org.designpattern.behavioral.ChainOfResponsibility;
+package org.designpattern.behavioral.chainOfResponsibility;
 
 /**
  * Created with IntelliJ IDEA.
  * User: jinhuawa
  * Date: 4/29/13
- * Time: 2:56 PM
+ * Time: 2:41 PM
  * To change this template use File | Settings | File Templates.
  */
-public class ConcreteHandleC extends Handle {
-    public ConcreteHandleC() {
+public class ConcreteHandleA extends Handle {
+    public ConcreteHandleA() {
         super();
     }
 
