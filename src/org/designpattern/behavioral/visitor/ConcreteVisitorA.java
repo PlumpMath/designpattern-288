@@ -11,12 +11,12 @@ public class ConcreteVisitorA extends Visitor {
     @Override
     public void visitConcreteElementA(Element element) {
         //To change body of implemented methods use File | Settings | File Templates.
-        System.out.println("i will visit element A!");
+        System.out.println("visitorA will visit element A!");
     }
 
     @Override
     public void visitConcreteElementB(Element element) {
         //To change body of implemented methods use File | Settings | File Templates.
-        System.out.println("i will visit element B!");
+        System.out.println("visitorA will visit element B!");
     }
 }
