@@ -1,7 +1,7 @@
 package org.designpattern.creational.simplefactory;
 
 public class PhoneFactory {
-	public Phone producePhone(String phoneType){
+	public static  Phone producePhone(String phoneType){
 		if("nokia".equals(phoneType))
 			return new NokiaPhone();
 		else if("ericsson".equals(phoneType))
