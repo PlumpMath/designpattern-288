@@ -1,22 +1,17 @@
 package org.designpattern.creational.prototype;
 
-public class Circle implements Shape,Cloneable {
+public class Circle extends Shape {
 
 	@Override
 	public void info() {
 		// TODO Auto-generated method stub
-		System.out.println("it's a circle!");
+		System.out.println("this is a circle!");
 	}
 
-	@Override
-	public Shape cloneShape() {
-		// TODO Auto-generated method stub
-		try{
-			return (Circle) this.clone();
-		}catch(Exception e){
-			e.printStackTrace();
-			return null;
-		}
-	}
+    @Override
+    public Shape copyShape() throws CloneNotSupportedException {
+        Circle circle = (Circle)super.clone();
+        return circle;  //To change body of implemented methods use File | Settings | File Templates.
+    }
 
 }
