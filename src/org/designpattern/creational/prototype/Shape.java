@@ -1,6 +1,6 @@
 package org.designpattern.creational.prototype;
 
-public interface Shape {
-	public Shape cloneShape();
-	public void info();
+public abstract class Shape implements  Cloneable {
+	public abstract void info();
+    public abstract Shape copyShape() throws CloneNotSupportedException;
 }
