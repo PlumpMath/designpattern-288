@@ -14,11 +14,18 @@ public class Programmer extends Employer {
     @Override
     public void add(Employer e) {
         //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("unsupported operation!");
     }
 
     @Override
     public void delete(Employer e) {
         //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("unsupported operation!");
+    }
+
+    @Override
+    public Employer getChild(int index) {
+        throw new UnsupportedOperationException("unsupported operation!");
     }
 
     @Override

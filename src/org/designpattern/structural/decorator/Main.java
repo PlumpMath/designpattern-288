@@ -10,9 +10,7 @@ package org.designpattern.structural.decorator;
 public class Main {
     public static void main(String[] args){
         Conponent conponent = new ConcreteConponent();
-
-        Decorator decorator = new ConcreteDecorator(conponent);
+        Conponent decorator = new ConcreteDecorator(conponent);
         decorator.operation();
-
     }
 }

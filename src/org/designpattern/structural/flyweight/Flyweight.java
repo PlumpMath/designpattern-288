@@ -8,11 +8,13 @@ package org.designpattern.structural.flyweight;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class Flyweight {
-    protected String intrinsicState;
+    protected Character intrinsicState;
 
-    protected Flyweight(String intrinsicState){
+    protected Flyweight(Character intrinsicState){
         this.intrinsicState = intrinsicState;
     };
-    public abstract void operation(String extrinsicState);
-    public abstract String getIntrinsicState();
+    public abstract  void  operation(String extrinsicState);
+    public Character getIntrinsicState(){
+        return this.intrinsicState;
+    };
 }

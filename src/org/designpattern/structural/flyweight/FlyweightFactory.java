@@ -1,9 +1,6 @@
 package org.designpattern.structural.flyweight;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
+import java.util.HashMap;
 /**
  * Created with IntelliJ IDEA.
  * User: jinhuawa
@@ -12,22 +9,27 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class FlyweightFactory {
-    private List<Flyweight> flyWeights;
+    private HashMap flyWeights;
     public FlyweightFactory(){
-        flyWeights = new ArrayList<Flyweight>();
+        flyWeights = new HashMap();
     }
-    public Flyweight getFlyweight(String key){
-        Iterator it = this.flyWeights.iterator();
-        while (it.hasNext()){
-            Flyweight fly = (Flyweight) it.next();
-            if(fly.getIntrinsicState().equals(key)){
-                System.out.println("already created!");
-                return fly;
-            }
+    public Flyweight getFlyweight(Character key){
+        if(this.flyWeights.containsKey(key)){
+            System.out.println(key + " already created!");
+            return (Flyweight) flyWeights.get(key);
+        }else{
+             Flyweight flyweight = new ConcreteFlyweight(key);
+             flyWeights.put(key,flyweight);
+             return flyweight;
         }
-        Flyweight flyWeight = new ConcreteFlyweight(key);
-        this.flyWeights.add(flyWeight);
-        return flyWeight;
     }
 
+    public Flyweight getUnsharedFlyweight(String keys ){
+        UnsharedConcreteFlyweight unsharedConcreteFlyweight = new UnsharedConcreteFlyweight(null);
+        for(int i=0;i<keys.length();i++){
+            Character character = new Character(keys.charAt(i));
+            unsharedConcreteFlyweight.add(character,getFlyweight(character));
+        }
+        return unsharedConcreteFlyweight;
+    }
 }

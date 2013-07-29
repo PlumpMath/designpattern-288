@@ -15,7 +15,7 @@ public abstract class Employer {
 
     public abstract void add(Employer e);
     public abstract  void delete(Employer e);
-
+    public abstract Employer getChild(int  index);
     public void setFollowing(List<Employer> following) {
         this.following = following;
     }
@@ -28,7 +28,9 @@ public abstract class Employer {
         System.out.println("the employer is an employer!");
     }
 
+/*
     public Employer getChild(int index){
         return null;
     }
+*/
 }

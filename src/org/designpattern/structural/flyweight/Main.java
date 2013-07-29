@@ -10,9 +10,15 @@ package org.designpattern.structural.flyweight;
 public class Main {
     public static void main(String[] args) {
         FlyweightFactory factory = new FlyweightFactory();
-        Flyweight fly1 = factory.getFlyweight("hello");
-        Flyweight fly2 = factory.getFlyweight("world");
-        Flyweight fly3 = factory.getFlyweight("hello");
+        Flyweight fly1 = factory.getFlyweight('a');
+        fly1.operation("First call!");
+        Flyweight fly2 = factory.getFlyweight('b');
+        fly2.operation("Second call!");
+        Flyweight fly3 = factory.getFlyweight('a');
+        fly3.operation("Third call!");
         System.out.println(fly1 == fly3);
+
+        Flyweight unsharedFlyweight = factory.getUnsharedFlyweight("abcde");
+        unsharedFlyweight.operation("Forth call!");
     }
 }
